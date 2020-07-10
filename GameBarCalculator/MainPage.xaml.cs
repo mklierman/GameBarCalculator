@@ -55,7 +55,7 @@ namespace GameBarCalculator
 
         private async void Widget_PinnedChanged(XboxGameBarWidget sender, object args)
         {
-           
+
         }
 
         private void zeroButton_Click(object sender, RoutedEventArgs e)
@@ -229,15 +229,18 @@ namespace GameBarCalculator
 
         private void equalsButton_Click(object sender, RoutedEventArgs e)
         {
-            removeTrailingDecimal();
-            if (getPreviousCharacter() != ")" && !isLastCharacterDigit())
-                numberTextBox.Text = numberTextBox.Text.Remove(numberTextBox.Text.Length - 1);
-
-            if (getPreviousCharacter() == ")" || isLastCharacterDigit())
+            if (numberTextBox.Text.Length > 0)
             {
-                var result = Calculator.Calculate(numberTextBox.Text);
-                numberTextBox.PlaceholderText = result.Result.ToString();
-                numberTextBox.Text = "";
+                removeTrailingDecimal();
+                if (getPreviousCharacter() != ")" && !isLastCharacterDigit())
+                    numberTextBox.Text = numberTextBox.Text.Remove(numberTextBox.Text.Length - 1);
+
+                if (getPreviousCharacter() == ")" || isLastCharacterDigit())
+                {
+                    var result = Calculator.Calculate(numberTextBox.Text);
+                    numberTextBox.PlaceholderText = result.Result.ToString();
+                    numberTextBox.Text = "";
+                }
             }
             equalsButton.Focus(FocusState.Pointer);
         }

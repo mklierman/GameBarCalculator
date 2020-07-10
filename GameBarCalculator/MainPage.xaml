@@ -21,9 +21,9 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             AcceptsReturn="False"
-            Foreground="White"
+            Foreground="{ThemeResource ButtonForegroundThemeBrush}"
             IsReadOnly="True"
-            PlaceholderForeground="White"
+            PlaceholderForeground="{ThemeResource ButtonForegroundThemeBrush}"
             PlaceholderText="0"
             TextAlignment="Right"
             TextWrapping="Wrap" />

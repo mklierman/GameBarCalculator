@@ -10,7 +10,7 @@ IgnorableNamespaces="uap3 uap mp">
   <Identity
     Name="36610MarkLierman.GameBarCalculator"
     Publisher="CN=9AB0FCDC-AE43-4D16-9AD0-29A58E6A3866"
-    Version="1.0.2.0" />
+    Version="1.0.14.0" />
 
   <mp:PhoneIdentity PhoneProductId="48ddac7c-62c0-4da3-8a88-c20bd9132dfb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
